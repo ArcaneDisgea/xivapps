@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Concert+One|Montserrat&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+
+    <link
+      rel="shortcut icon"
+      href="https://xivapi.com/i/000000/000001.png"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" href="./assets/css/xivsheetsapp.css" />
+    <title>XIV Sheets</title>
+  </head>
+  <body>
+    <div class="background-image"></div>
+    <div class="header">
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a href="/" class="navbar-brand">
+          <img src="https://xivapi.com/i/000000/000046.png" id="logo" />
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="https://arcanedisgea.github.io/xivapps/"
+                >Home <span class="sr-only">(current)</span></a
+              >
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                id="navbarDropdown"
+                role="button"
+                data-toggle="dropdown"
+                aria-haspopup="true"
+                aria-expanded="false"
+              >
+                Apps
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a
+                  class="dropdown-item"
+                  href="https://arcanedisgea.github.io/xivapps/xiv-id"
+                  >XIV-ID</a
+                >
+                <a
+                  class="dropdown-item"
+                  href="https://arcanedisgea.github.io/xivapps/xiv-sheets"
+                  >XIV-Sheets</a
+                >
+                <a class="dropdown-item" href="#">XIV-Action</a>
+              </div>
+            </li>
+          </ul>
+          <div class="form-inline my-2 my-lg-0">
+            <input
+              class="form-control mr-sm-2"
+              type="text"
+              placeholder="Character Name"
+              id="char-search"
+            />
+            <select id="server-select" class="form-control mr-sm-2">
+              <option value="">Select a server</option>
+              <option value=""><strong>Aether</strong></option>
+              <option value="Adamantoise">&nbsp;Adamantoise</option>
+              <option value="Cactuar">&nbsp;Cactuar</option>
+              <option value="Faerie">&nbsp;Faerie</option>
+              <option value="Gilgamesh">&nbsp;Gilgamesh</option>
+              <option value="Jenova">&nbsp;Jenova</option>
+              <option value="Midgardsormr">&nbsp;Midgardsormr</option>
+              <option value="Sargatanas">&nbsp;Sargatanas</option>
+              <option value="Siren">&nbsp;Siren</option>
+              <option value=""><strong>Primal</strong></option>
+              <option value="Behemoth">&nbsp;Behemoth</option>
+              <option value="Excalibur">&nbsp;Excalibur</option>
+              <option value="Exodus">&nbsp;Exodus</option>
+              <option value="Famfrit">&nbsp;Famfrit</option>
+              <option value="Hyperion">&nbsp;Hyperion</option>
+              <option value="Lamia">&nbsp;Lamia</option>
+              <option value="Leviathan">&nbsp;Leviathan</option>
+              <option value="Ultros">&nbsp;Ultros</option>
+              <option value=""><strong>Crystal</strong></option>
+              <option value="Balmung">&nbsp;Balmung</option>
+              <option value="Brynhildr">&nbsp;Brynhildr</option>
+              <option value="Coeurl">&nbsp;Coeurl</option>
+              <option value="Diabolos">&nbsp;Diabolos</option>
+              <option value="Goblin">&nbsp;Goblin</option>
+              <option value="Malboro">&nbsp;Malboro</option>
+              <option value="Mateus">&nbsp;Mateus</option>
+              <option value="Zalera">&nbsp;Zalera</option>
+              <option value=""><strong>Chaos</strong></option>
+              <option value="Cerberus">&nbsp;Cerberus</option>
+              <option value="Louisoix">&nbsp;Louisoix</option>
+              <option value="Moogle">&nbsp;Moogle</option>
+              <option value="Omega">&nbsp;Omega</option>
+              <option value="Ragnarok">&nbsp;Ragnarok</option>
+              <option value="Spriggan">&nbsp;Spriggan</option>
+              <option value=""><strong>Light</strong></option>
+              <option value="Lich">&nbsp;Lich</option>
+              <option value="Odin">&nbsp;Odin</option>
+              <option value="Phoenix">&nbsp;Phoenix</option>
+              <option value="Shiva">&nbsp;Shiva</option>
+              <option value="Twintania">&nbsp;Twintania</option>
+              <option value="Zodiark">&nbsp;Zodiark</option>
+            </select>
+            <button
+              class="btn btn-outline-success my-2 my-sm-0"
+              type="button"
+              id="searchbtn"
+              onclick="search_action()"
+            >
+              Search
+            </button>
+          </div>
+        </div>
+      </nav>
+      <!-- <img src="https://xivapi.com/i/000000/000001.png" />
+      <span>XIV Sheets</span> 
+      <input id="char-search" value="" placeholder="Character Name" />
+      <select id="server-select">
+        <option value="">Select a server</option>
+        <option value="">Aether</option>
+        <option value="Adamantoise">&nbsp;Adamantoise</option>
+        <option value="Cactuar">&nbsp;Cactuar</option>
+        <option value="Faerie">&nbsp;Faerie</option>
+        <option value="Gilgamesh">&nbsp;Gilgamesh</option>
+        <option value="Jenova">&nbsp;Jenova</option>
+        <option value="Midgardsormr">&nbsp;Midgardsormr</option>
+        <option value="Sargatanas">&nbsp;Sargatanas</option>
+        <option value="Siren">&nbsp;Siren</option>
+        <option value="">Primal</option>
+        <option value="Behemoth">&nbsp;Behemoth</option>
+        <option value="Excalibur">&nbsp;Excalibur</option>
+        <option value="Exodus">&nbsp;Exodus</option>
+        <option value="Famfrit">&nbsp;Famfrit</option>
+        <option value="Hyperion">&nbsp;Hyperion</option>
+        <option value="Lamia">&nbsp;Lamia</option>
+        <option value="Leviathan">&nbsp;Leviathan</option>
+        <option value="Ultros">&nbsp;Ultros</option>
+        <option value="">Crystal</option>
+        <option value="Balmung">&nbsp;Balmung</option>
+        <option value="Brynhildr">&nbsp;Brynhildr</option>
+        <option value="Coeurl">&nbsp;Coeurl</option>
+        <option value="Diabolos">&nbsp;Diabolos</option>
+        <option value="Goblin">&nbsp;Goblin</option>
+        <option value="Malboro">&nbsp;Malboro</option>
+        <option value="Mateus">&nbsp;Mateus</option>
+        <option value="Zalera">&nbsp;Zalera</option>
+        <option value="">Chaos</option>
+        <option value="Cerberus">&nbsp;Cerberus</option>
+        <option value="Louisoix">&nbsp;Louisoix</option>
+        <option value="Moogle">&nbsp;Moogle</option>
+        <option value="Omega">&nbsp;Omega</option>
+        <option value="Ragnarok">&nbsp;Ragnarok</option>
+        <option value="Spriggan">&nbsp;Spriggan</option>
+        <option value="">Light</option>
+        <option value="Lich">&nbsp;Lich</option>
+        <option value="Odin">&nbsp;Odin</option>
+        <option value="Phoenix">&nbsp;Phoenix</option>
+        <option value="Shiva">&nbsp;Shiva</option>
+        <option value="Twintania">&nbsp;Twintania</option>
+        <option value="Zodiark">&nbsp;Zodiark</option>
+      </select>
+
+      <button type="submit" id="search" onclick="search_action()">
+        Search
+      </button> -->
+    </div>
+    <div id="character-sheet">
+      <p>Search a character to have their basic info displayed!</p>
+    </div>
+    <script src="./assets/js/xivsheetsapp.js"></script>
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

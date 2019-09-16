@@ -1,0 +1,245 @@
+html {
+  background-color: #202020;
+  font-family: 'Montserrat', sans-serif;
+
+}
+
+.background-image {
+  background: url("https://raw.githubusercontent.com/xivapi/ffxiv-launcher/master/public/assets/images/background5.jpg")
+    no-repeat center center fixed;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  -webkit-filter: blur(5px);
+  -moz-filter: blur(5px);
+  -o-filter: blur(5px);
+  -ms-filter: blur(5px);
+  filter: blur(5px);
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+}
+
+#character-sheet p {
+    position: absolute;
+    padding: 0.5em;
+    margin-left: 29%;
+}
+
+#character-sheet {
+  margin: 5% 20%;
+  padding: 2% 2%;
+  background-color: #443f3f;
+  color: white;
+  border-radius: 3px;
+  position: relative;
+  z-index: 9999;
+  display: grid;
+  grid-template-columns: 40% 5% 55%;
+  grid-template-rows: 50% 10% 45%;
+  grid-template-areas:
+    "chara-portrait . chara-info"
+    "chara-portrait . ."
+    "chara-portrait . chara-classjobs";
+  -webkit-box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.75);
+}
+
+#chara-portrait {
+  grid-area: chara-portrait;
+  width: 25em;
+  border-radius: 3px;
+  place-self: center;
+  -webkit-box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.75);
+}
+
+#chara-info {
+  grid-area: chara-info;
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: 14% 14% 14% 14% 14% 14% 14%;
+  grid-template-areas:
+    ". chara-name ."
+    ". chara-title ."
+    ". chara-nameday ."
+    ". chara-race-tribe ."
+    "chara-town chara-town ."
+    "chara-deity chara-deity ."
+    "chara-fc-crest chara-fc-crest .";
+  align-items: center;
+}
+
+#chara-name {
+  grid-area: chara-name;
+  text-align: center;
+}
+
+#chara-title {
+  grid-area: chara-title;
+  text-align: center;
+}
+
+#chara-nameday {
+  grid-area: chara-nameday;
+  text-align: center;
+}
+
+#chara-race-tribe {
+  grid-area: chara-race-tribe;
+  text-align: center;
+}
+
+#chara-fc-crest {
+  grid-area: chara-fc-crest;
+}
+
+#chara-fc-crest img {
+  width: 2em;
+  padding: 5px;
+  vertical-align: middle;
+}
+
+#chara-town {
+  grid-area: chara-town;
+}
+
+#chara-town img {
+  vertical-align: middle;
+  padding: 5px;
+}
+
+#chara-deity {
+  grid-area: chara-deity;
+}
+
+#chara-deity img {
+  vertical-align: middle;
+  padding: 5px;
+}
+
+#chara-class-jobs {
+  grid-area: chara-classjobs;
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: auto;
+  grid-template-areas:
+    "PLD WAR DRK GNB . . . . . . WHM SCH AST "
+    "MNK DRG NIN SAM . BRD MCH DNC . BLM SMN RDM BLU"
+    "MIN BTN FSH . . BSM ARM GSM CRP LTW WVR ALC CUL";
+  text-align: center;
+  place-self: center;
+}
+
+#PLD {
+  grid-area: PLD;
+}
+#WAR {
+  grid-area: WAR;
+}
+#DRK {
+  grid-area: DRK;
+}
+#GNB {
+  grid-area: GNB;
+}
+#WHM {
+  grid-area: WHM;
+}
+#SCH {
+  grid-area: SCH;
+}
+#AST {
+  grid-area: AST;
+}
+#MNK {
+  grid-area: MNK;
+}
+#DRG {
+  grid-area: DRG;
+}
+#NIN {
+  grid-area: NIN;
+}
+#SAM {
+  grid-area: SAM;
+}
+#BRD {
+  grid-area: BRD;
+}
+#MCH {
+  grid-area: MCH;
+}
+#DNC {
+  grid-area: DNC;
+}
+#BLM {
+  grid-area: BLM;
+}
+#SMN {
+  grid-area: SMN;
+}
+#RDM {
+  grid-area: RDM;
+}
+#BLU {
+  grid-area: BLU;
+}
+#MIN {
+  grid-area: MIN;
+}
+#BTN {
+  grid-area: BTN;
+}
+#FSH {
+  grid-area: FSH;
+}
+#BSM {
+  grid-area: BSM;
+}
+#ARM {
+  grid-area: ARM;
+}
+#GSM {
+  grid-area: GSM;
+}
+#CRP {
+  grid-area: CRP;
+}
+#LTW {
+  grid-area: LTW;
+}
+#WVR {
+  grid-area: WVR;
+}
+#CUL {
+  grid-area: CUL;
+}
+#ALC {
+  grid-area: ALC;
+}
+
+#chara-class-jobs img {
+  width: 3em;
+  display: block;
+}
+
+#chara-class-jobs span {
+    align-content: center;
+}
